@@ -1,0 +1,35 @@
+{% extends 'bas.html' %}
+{% load static  %}
+{% block title %}Employee show{% endblock title %}
+{% block content %}
+
+    <table class="table table-striped">
+            <thead>
+                   <tr>
+                       <th>emp_name</th>
+                       <th>emp_post</th>
+                       <th>emp_salary</th>
+                        <th>distr</th>
+                        <th>sub_distr</th>
+                        <th>address</th>
+                   </tr>
+            </thead>
+            <tbody>
+              {% for cus in cust_list %}
+                     <tr>
+                         <td>{{cus.cust_name}}</td>
+                         <td>{{cus.cust_email}}</td>
+                         <td>{{cus.cust_Phon}}</td>
+                          <td>{{cus.distr}}</td>
+                          <td>{{cus.sub_distr}}</td>
+                           <td>{{cus.address}}</td>
+                         <td>
+                               <a href="/delete_cust/{{cus.id}}" class="btn btn-danger">Delete</a>
+                               <a class="btn btn-success">Update</a>
+                         </td>
+                     </tr>
+              {% endfor %}
+            </tbody>
+    </table>
+
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends 'bas.html' %}
+{% load static  %}
+{% block title %}Employee Add{% endblock title %}
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+          <div class="form-group">
+              <label for="employee">Emp_name</label>
+              <input type="text" class="form-control" id="employee" placeholder="@employee name" name="emp_name">
+          </div>
+        <div class="form-group">
+              <label for="emp_post">Emp_post</label>
+              <input type="text" class="form-control" id="emp_post" placeholder="@emp_post" name="emp_post">
+        </div>
+        <div class="form-group">
+              <label for="emp_salary">emp_salary</label>
+              <input type="text" class="form-control" id="emp_salary" placeholder="@emp_salary" name="emp_salary">
+        </div>
+        <div class="form-group">
+              <label for="distr">distr</label>
+              <input type="text" class="form-control" id="distr" placeholder="@distr" name="distr">
+        </div>
+        <div class="form-group">
+              <label for="sub_distr">sub_distr</label>
+              <input type="text" class="form-control" id="sub_distr" placeholder="@sub_distr" name="sub_distr">
+        </div>
+        <div class="form-group">
+              <label for="address">address</label>
+              <input type="text" class="form-control" id="address" placeholder="@address" name="address">
+        </div>
+
+         <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock content %}

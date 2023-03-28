@@ -1,0 +1,36 @@
+{% extends 'bas.html' %}
+{% load static  %}
+{% block title %}customer Add{% endblock title %}
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+             <div class="form-group">
+               <label for="cust_name">cust_name</label>
+               <input type="text" class="form-control" id="cust_name" placeholder="@cust_name" name="cust_name">
+           </div>
+             <div class="form-group">
+               <label for="cust_email">Emp_post</label>
+               <input type="text" class="form-control" id="cust_email" placeholder="@cust_email" name="cust_email">
+             </div>
+             <div class="form-group">
+               <label for="cust_Phon">cust_Phon</label>
+                <input type="text" class="form-control" id="cust_Phon" placeholder="@cust_Phon" name="cust_Phon">
+             </div>
+              <div class="form-group">
+                  <label for="distr">distr</label>
+                <input type="text" class="form-control" id="distr" placeholder="@distr" name="distr">
+              </div>
+             <div class="form-group">
+                  <label for="sub_distr">sub_distr</label>
+                   <input type="text" class="form-control" id="sub_distr" placeholder="@sub_distr" name="sub_distr">
+             </div>
+             <div class="form-group">
+                  <label for="address">address</label>
+                <input type="text" class="form-control" id="address" placeholder="@address" name="address">
+             </div>
+   
+           <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock content %}
